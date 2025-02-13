@@ -1,48 +1,49 @@
-/* Quita márgenes y oculta scroll para que la animación ocupe toda la pantalla */
+/* Quita márgenes y oculta el scroll para que la animación ocupe toda la pantalla */
 body {
   margin: 0;
   overflow: hidden;
 }
 
-/* La cancha ocupa todo el viewport y muestra la imagen de fondo */
+/* La cancha ocupa todo el viewport y se muestra como fondo */
 .cancha {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-image: url('cancha.png');
+  background: url('cancha.png') no-repeat center center;
   background-size: cover;
-  background-position: center;
 }
 
-/* Posición de la chica en la cancha */
+/* La chica se centra horizontalmente y se posiciona cerca del fondo */
 .chico {
   position: absolute;
-  bottom: 5%;
-  left: 10%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 150px;
 }
 
-/* La pelota inicia en las manos de la chica y se anima hacia la canasta */
+/* La pelota inicia en la mano de la chica (centrada respecto a ella) */
 .pelota {
   position: absolute;
-  bottom: 12%;
-  left: 16%;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 40px;
   animation: encestar 2s ease-in-out infinite;
 }
 
-/* Animación: la pelota se mueve en una trayectoria curva hacia la canasta */
+/* Animación: la pelota sigue una trayectoria (parabólica) desde la mano de la chica hasta el área del aro */
 @keyframes encestar {
   0% {
-    left: 16%;
-    bottom: 12%;
+    left: 50%;
+    bottom: 20%;
   }
   50% {
-    left: 35%;
-    bottom: 60%;
+    left: 65%;
+    bottom: 50%;
   }
   100% {
-    left: 70%;
-    bottom: 80%;
+    left: 80%;
+    bottom: 85%;
   }
 }
