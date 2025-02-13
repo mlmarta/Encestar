@@ -14,7 +14,7 @@ body {
 }
 
 /* La chica se posiciona centrada horizontalmente y cerca del borde inferior */
-.chica {
+.chico {
   position: absolute;
   bottom: 10%;
   left: 50%;
