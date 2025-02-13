@@ -1,10 +1,10 @@
-/* Quita márgenes y evita el scroll para que la animación ocupe toda la pantalla */
+/* Quita márgenes y oculta el scroll para que la animación ocupe toda la pantalla */
 body {
   margin: 0;
   overflow: hidden;
 }
 
-/* La cancha ocupa todo el viewport y se muestra como fondo (una única imagen) */
+/* La cancha ocupa todo el viewport y se muestra como fondo, sin duplicar imágenes */
 .cancha {
   position: relative;
   width: 100vw;
@@ -22,28 +22,31 @@ body {
   width: 150px;
 }
 
-/* La pelota inicia justo en la mano de la chica y se anima hacia el "aro" */
+/* La pelota inicia en la mano de la chica y se anima en un arco natural */
 .pelota {
   position: absolute;
-  bottom: 20%;
+  bottom: 12%; /* Ajusta este valor para que la pelota quede justo en la mano */
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
-  animation: shot 2s ease-in-out infinite;
+  animation: encestar 2s ease-in-out infinite;
 }
 
-/* La animación mueve la pelota en una trayectoria parabólica */
-@keyframes shot {
+/* Animación de la pelota:
+   - Comienza en la mano de la chica (50% horizontal, 12% sobre el fondo).
+   - Llega al pico del arco (50% de la animación) desplazándose hacia la derecha y subiendo.
+   - Finaliza cerca del "aro" (más a la derecha y a menor altura) */
+@keyframes encestar {
   0% {
     left: 50%;
-    bottom: 20%;
+    bottom: 12%;
   }
   50% {
-    left: 65%;
-    bottom: 65%;
+    left: 60%;
+    bottom: 50%;
   }
   100% {
-    left: 80%;
-    bottom: 85%;
+    left: 75%;
+    bottom: 25%;
   }
 }
