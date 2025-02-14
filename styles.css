@@ -17,40 +17,44 @@ body {
 .chico {
   position: absolute;
   bottom: 10%;
-  left: 45%; /* Ajustado para mejor alineación */
+  left: 45%;
   width: 150px;
 }
 
-/* La pelota empieza EXACTAMENTE en la mano del chico */
+/* La pelota empieza exactamente en la mano del chico */
 .pelota {
   position: absolute;
-  bottom: 30%; /* Ahora sí en la mano del chico */
-  left: 48%; /* Ajustado para salir bien */
+  bottom: 30%;
+  left: 49%;
   transform: translateX(-50%);
   width: 40px;
-  animation: encestar 2s ease-in-out infinite;
+  animation: fallarEncesto 2.5s ease-in-out infinite;
 }
 
-/* Animación de la pelota hacia la canasta */
-@keyframes encestar {
+/* Animación de fallo en el enceste */
+@keyframes fallarEncesto {
   0% {
-    left: 48%;
+    left: 49%;
     bottom: 30%;
   }
-  25% {
-    left: 55%;
-    bottom: 55%;
+  30% {
+    left: 58%;
+    bottom: 60%;
   }
-  50% {
-    left: 65%;
-    bottom: 78%;
-  }
-  75% {
-    left: 72%;
+  60% {
+    left: 70%;
     bottom: 85%;
   }
+  80% {
+    left: 75%;
+    bottom: 63%; /* Aquí "pega" en el aro */
+  }
+  90% {
+    left: 72%;
+    bottom: 70%; /* Rebota hacia arriba */
+  }
   100% {
-    left: 75%; /* Ajustado para llegar justo al aro */
-    bottom: 63%; /* Ajustado para encestar completamente */
+    left: 80%;
+    bottom: 20%; /* Cae al suelo después de fallar */
   }
 }
