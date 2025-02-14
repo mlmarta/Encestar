@@ -1,23 +1,39 @@
 #cancha {
-  /* Estilos para la imagen de la cancha */
-  width: 600px; /* Ajusta el tamaño según tu imagen */
-  height: 400px; /* Ajusta el tamaño según tu imagen */
-  background-image: url("cancha.png");
-  background-size: cover;
-  position: relative; /* Necesario para posicionar la pelota y al chico */
+    width: 600px; /* Ajusta el tamaño según tu imagen */
+    height: 400px; /* Ajusta el tamaño según tu imagen */
+    background-image: url("cancha.png");
+    background-size: cover;
+    position: relative;
 }
 
 #chico {
-  /* Estilos para la imagen del chico */
-  position: absolute;
-  /* Posición inicial del chico */
-  left: 100px;
-  bottom: 50px;
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
 }
 
 #pelota {
-  /* Estilos para la imagen de la pelota */
-  position: absolute;
-  /* Posición inicial de la pelota (oculta inicialmente) */
-  display: none;
+    width: 30px; /* Ajusta el tamaño de la pelota */
+    height: 30px; /* Ajusta el tamaño de la pelota */
+    background-color: red; /* Color de la pelota */
+    border-radius: 50%; /* Hace que sea redonda */
+    position: absolute;
+    left: 100px; /* Posición inicial */
+    bottom: 50px; /* Inicia a nivel del chico */
+    animation: lanzar 2s forwards; /* Llama a la animación al cargar */
+}
+
+@keyframes lanzar {
+    0% {
+        bottom: 50px; /* Posición inicial */
+        transform: translateX(0);
+    }
+    50% {
+        bottom: 200px; /* Altura máxima de la pelota */
+        transform: translateX(50px); /* Movimiento hacia el aro */
+    }
+    100% {
+        bottom: 50px; /* Regresa al suelo */
+        transform: translateX(0);
+    }
 }
