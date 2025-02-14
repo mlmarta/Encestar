@@ -29,6 +29,8 @@ body {
   transform: translateX(-50%);
   width: 40px;
   animation: tiroCorto 2.5s ease-in-out infinite;
+  background-color: red; /* Color temporal para visualizar la pelota */
+  border-radius: 50%; /* Para que se vea redonda */
 }
 
 /* Animación de fallo por tiro corto */
