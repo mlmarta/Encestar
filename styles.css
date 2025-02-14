@@ -24,8 +24,8 @@ body {
 /* La pelota empieza EXACTAMENTE en la mano del chico */
 .pelota {
   position: absolute;
-  bottom: 27%; /* Subida para que salga de la mano */
-  left: 50%;
+  bottom: 30%; /* Ahora sí en la mano del chico */
+  left: 48%; /* Ajustado para salir bien */
   transform: translateX(-50%);
   width: 40px;
   animation: encestar 2s ease-in-out infinite;
@@ -34,8 +34,8 @@ body {
 /* Animación de la pelota hacia la canasta */
 @keyframes encestar {
   0% {
-    left: 50%;
-    bottom: 27%;
+    left: 48%;
+    bottom: 30%;
   }
   25% {
     left: 55%;
@@ -43,14 +43,14 @@ body {
   }
   50% {
     left: 65%;
-    bottom: 75%;
+    bottom: 78%;
   }
   75% {
     left: 72%;
-    bottom: 70%;
+    bottom: 85%;
   }
   100% {
-    left: 75%; /* Ajustado para llegar a la canasta */
-    bottom: 60%; /* Ajustado para la altura del aro */
+    left: 75%; /* Ajustado para llegar justo al aro */
+    bottom: 63%; /* Ajustado para encestar completamente */
   }
 }
