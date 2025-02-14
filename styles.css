@@ -55,6 +55,6 @@ body {
   }
   100% {
     left: 80%;
-    bottom: 20%; /* Cae al suelo después de fallar */
+    bottom: 10%; /* Cae al suelo después de fallar */
   }
 }
