@@ -28,7 +28,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
-  animation: encestar 2s ease-in-out infinite;
+  background-color: red; /* Cambia este color si lo deseas */
+  border-radius: 50%;
+  animation: encestar 2s ease-in-out infinite; /* Movimiento suave */
 }
 
 /* Animación de la pelota hacia la canasta */
@@ -37,20 +39,24 @@ body {
     left: 50%;
     bottom: 27%;
   }
-  25% {
+  20% {
     left: 55%;
-    bottom: 55%;
+    bottom: 55%; /* La pelota sube hacia el aro */
   }
   50% {
     left: 65%;
-    bottom: 75%;
+    bottom: 80%; /* La pelota sigue subiendo, alcanzando su punto más alto */
   }
-  75% {
-    left: 72%;
-    bottom: 70%;
+  70% {
+    left: 70%;
+    bottom: 75%; /* Empieza a caer */
+  }
+  90% {
+    left: 75%;
+    bottom: 50%; /* Rebotando hacia abajo */
   }
   100% {
-    left: 75%; /* Ajustado para llegar a la canasta */
-    bottom: 60%; /* Ajustado para la altura del aro */
+    left: 80%;
+    bottom: 20%; /* La pelota cae al suelo, fuera del aro */
   }
 }
