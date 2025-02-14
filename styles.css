@@ -1,4 +1,4 @@
-/* Quita márgenes y oculta el scroll para que la animación ocupe toda la pantalla */
+/* Ajustes generales */
 body {
   margin: 0;
   overflow: hidden;
@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-/* La chica está en el centro de la cancha */
+/* El chico está en el centro de la cancha */
 .chico {
   position: absolute;
   bottom: 10%;
@@ -22,7 +22,7 @@ body {
   width: 150px;
 }
 
-/* La pelota empieza en la mano de la chica */
+/* La pelota inicia en la mano del chico */
 .pelota {
   position: absolute;
   bottom: 15%; /* Ajuste fino para que salga de la mano */
@@ -32,7 +32,7 @@ body {
   animation: encestar 2s ease-in-out infinite;
 }
 
-/* Animación para dirigir la pelota hacia la canasta */
+/* Animación de la pelota hacia la canasta */
 @keyframes encestar {
   0% {
     left: 50%;
@@ -47,7 +47,7 @@ body {
     bottom: 75%;
   }
   100% {
-    left: 72%; /* Ajusta esto si el aro está más a la derecha */
-    bottom: 60%; /* Ajusta esto si el aro está más alto */
+    left: 72%; /* Ajusta esto según la posición del aro */
+    bottom: 60%; /* Ajusta esto según la altura del aro */
   }
 }
