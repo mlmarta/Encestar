@@ -31,4 +31,22 @@ body {
   animation: tiroCorto 2.5s ease-in-out infinite;
 }
 
-/* Animación de fallo por tiro corto
+/* Animación de fallo por tiro corto */
+@keyframes tiroCorto {
+  0% {
+    left: 49%;
+    bottom: 30%;
+  }
+  30% {
+    left: 55%;
+    bottom: 50%;
+  }
+  60% {
+    left: 60%;
+    bottom: 60%;
+  }
+  100% {
+    left: 65%; /* Se queda corto antes del aro */
+    bottom: 20%; /* Cae al suelo antes de llegar */
+  }
+}
