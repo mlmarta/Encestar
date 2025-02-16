@@ -9,8 +9,8 @@ body {
 }
 .contenedor {
     position: relative;
-    width: 1200px;
-    height: 700px;
+    width: 1600px;  /* Aumentamos el tamaño de la cancha */
+    height: 900px;
 }
 .cancha {
     position: absolute;
@@ -25,15 +25,35 @@ body {
 }
 .pelota {
     position: absolute;
-    bottom: 18%;
+    bottom: 18%; /* Alineamos la pelota con las manos del chico */
     left: 49%;
     width: 4%;
-    animation: tiro 3s ease-in-out infinite;
+    animation: tiro 3s ease-in-out forwards;  /* Usamos forwards para que la animación se detenga en la posición final */
 }
+
 @keyframes tiro {
-    0% { bottom: 18%; left: 49%; }
-    30% { bottom: 50%; left: 55%; }
-    60% { bottom: 70%; left: 65%; }
-    90% { bottom: 50%; left: 75%; }
-    100% { bottom: 18%; left: 85%; }
+    0% { bottom: 18%; left: 49%; transform: scale(1); }
+    25% { bottom: 40%; left: 52%; transform: scale(1.2); } /* La pelota sube un poco */
+    50% { bottom: 60%; left: 55%; transform: scale(1.2); } /* La pelota llega a su punto más alto */
+    75% { bottom: 40%; left: 60%; transform: scale(1.1); } /* La pelota empieza a caer */
+    100% { bottom: 18%; left: 80%; transform: scale(1); } /* La pelota llega a un lado (fuera o fallida) */
+}
+
+.pelota.encesta {
+    animation: encesta 3s ease-in-out forwards;
+}
+
+@keyframes encesta {
+    0% { bottom: 18%; left: 49%; transform: scale(1); }
+    25% { bottom: 40%; left: 52%; transform: scale(1.2); }
+    50% { bottom: 60%; left: 55%; transform: scale(1.2); }
+    75% { bottom: 40%; left: 60%; transform: scale(1.1); }
+    100% { bottom: 50%; left: 70%; transform: scale(1); }
+}
+
+.chico.encesta {
+    position: absolute;
+    bottom: 50%;
+    left: 45%;
+    transform: translateY(50%);
 }
