@@ -29,6 +29,7 @@ body {
 }
 @keyframes tiro {
     0% { bottom: 100px; left: 50%; }
-    50% { bottom: 300px; left: 70%; }
-    100% { bottom: 50px; left: 85%; }
+    50% { bottom: 250px; left: 60%; }
+    75% { bottom: 300px; left: 75%; }
+    100% { bottom: 150px; left: 90%; }
 }
