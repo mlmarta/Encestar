@@ -19,29 +19,30 @@ body {
 /* Imagen de la cancha */
 .cancha {
     position: absolute;
-    top: 0;   /* Asegura que la cancha esté alineada con la parte superior de la pantalla */
-    left: 0;  /* Asegura que la cancha esté alineada con la parte izquierda de la pantalla */
-    width: 100vw;  /* Asegura que la cancha ocupe todo el ancho de la pantalla */
-    height: 100vh; /* Asegura que la cancha ocupe todo el alto de la pantalla */
-    object-fit: cover;  /* Ajusta la imagen para cubrir todo el espacio sin distorsionarla */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 /* Estilo para el chico */
 .chico {
     position: absolute;
-    bottom: 80px;  /* Aseguramos que el chico no esté pegado al suelo */
-    left: 50%;     /* Centrado horizontalmente */
-    transform: translateX(-50%);  /* Centrado exacto */
-    width: 120px;  /* Ajuste del tamaño */
+    bottom: 80px;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
 }
 
 /* Estilo para la pelota */
 .pelota {
     position: absolute;
-    bottom: 150px; /* Ajuste para que la pelota esté justo en las manos del chico */
-    left: 48%;  /* Centrado horizontalmente con respecto al chico */
-    width: 40px; /* Ajuste del tamaño de la pelota */
-    animation: tiro 2s ease-out forwards; /* Animación de la pelota */
+    bottom: 150px;
+    left: 48%;
+    width: 40px;
+    animation: tiro 2s ease-out infinite; /* Animación infinita */
+    animation-delay: 4s; /* Espera 4 segundos antes de reiniciar */
 }
 
 /* Animación para el tiro */
@@ -49,5 +50,5 @@ body {
     0% { bottom: 150px; left: 48%; }
     50% { bottom: 400px; left: 60%; }
     75% { bottom: 500px; left: 75%; }
-    100% { bottom: 200px; left: 90%; } /* La pelota sale del campo (fallo) */
+    100% { bottom: 200px; left: 90%; } /* La pelota sale del campo */
 }
