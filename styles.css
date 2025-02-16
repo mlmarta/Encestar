@@ -1,4 +1,4 @@
-/* Usamos toda la pantalla para el fondo */
+/* Hacemos que el body ocupe toda la pantalla y se centre el contenido */
 body {
     margin: 0;
     overflow: hidden;
@@ -19,16 +19,16 @@ body {
 /* La cancha debe ocupar toda la pantalla */
 .cancha {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;  /* Aseguramos que la cancha ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Aseguramos que la cancha ocupe todo el alto de la pantalla */
 }
 
 /* Colocamos al chico en el centro de la cancha */
 .chico {
     position: absolute;
-    bottom: 10%;  /* Un poco arriba para simular la posición natural */
-    left: 50%;    /* Centrado horizontalmente */
-    transform: translateX(-50%);  /* Para asegurar que el centro del chico esté justo en el medio */
+    bottom: 15%;   /* Ajustamos un poco más arriba para que no esté pegado al suelo */
+    left: 50%;
+    transform: translateX(-50%);  /* Aseguramos que el chico esté centrado horizontalmente */
     width: 12%;
 }
 
@@ -38,19 +38,19 @@ body {
     bottom: 20%; /* Ajustamos para que la pelota salga desde las manos del chico */
     left: 50%;
     transform: translateX(-50%);  /* Centrar la pelota con respecto al chico */
-    width: 4%;
+    width: 5%;  /* Aumento ligeramente el tamaño de la pelota */
     animation: tiro 3s ease-in-out forwards;
 }
 
 @keyframes tiro {
     0% { bottom: 20%; left: 50%; transform: translateX(-50%); }
     25% { bottom: 45%; left: 55%; transform: translateX(-50%) scale(1.1); } /* La pelota sube */
-    50% { bottom: 70%; left: 60%; transform: translateX(-50%) scale(1.2); } /* La pelota llega al punto más alto */
-    75% { bottom: 45%; left: 65%; transform: translateX(-50%) scale(1.1); } /* La pelota empieza a caer */
-    100% { bottom: 20%; left: 80%; transform: translateX(-50%); } /* La pelota cae fallando (fuera de la cancha) */
+    50% { bottom: 70%; left: 60%; transform: translateX(-50%) scale(1.2); } /* La pelota alcanza el punto más alto */
+    75% { bottom: 45%; left: 65%; transform: translateX(-50%) scale(1.1); } /* La pelota empieza a bajar */
+    100% { bottom: 20%; left: 80%; transform: translateX(-50%); } /* La pelota cae fuera del campo (fallido) */
 }
 
-/* Animación para el enceste */
+/* Animación para el enceste (cuando la pelota entra) */
 .pelota.encesta {
     animation: encesta 3s ease-in-out forwards;
 }
@@ -60,13 +60,13 @@ body {
     25% { bottom: 45%; left: 55%; transform: translateX(-50%) scale(1.1); }
     50% { bottom: 70%; left: 60%; transform: translateX(-50%) scale(1.2); }
     75% { bottom: 45%; left: 65%; transform: translateX(-50%) scale(1.1); }
-    100% { bottom: 50%; left: 70%; transform: translateX(-50%); } /* Aquí la pelota entra al aro */
+    100% { bottom: 50%; left: 75%; transform: translateX(-50%); } /* La pelota entra al aro */
 }
 
-/* Si encesta, colocamos al chico en el centro de la cancha */
+/* Si la pelota encesta, movemos al chico al centro de la cancha */
 .chico.encesta {
     position: absolute;
-    bottom: 50%;
+    bottom: 50%;  /* Colocamos al chico en el centro de la cancha */
     left: 50%;
-    transform: translate(-50%, 50%); /* Centrado vertical y horizontalmente */
+    transform: translate(-50%, 50%); /* Centramos completamente */
 }
