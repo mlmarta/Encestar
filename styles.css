@@ -9,8 +9,8 @@ body {
 }
 .contenedor {
     position: relative;
-    width: 800px;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
 }
 .cancha {
     position: absolute;
@@ -19,20 +19,21 @@ body {
 }
 .chico {
     position: absolute;
-    bottom: 80px;
+    bottom: 10%;
     left: 45%;
-    width: 120px;
+    width: 10%;
 }
 .pelota {
     position: absolute;
-    bottom: 150px;
+    bottom: 15%;
     left: 48%;
-    width: 40px;
-    animation: tiro 2s ease-out forwards;
+    width: 5%;
+    animation: tiro 3s ease-in-out infinite;
 }
 @keyframes tiro {
-    0% { bottom: 150px; left: 48%; }
-    50% { bottom: 400px; left: 60%; }
-    75% { bottom: 500px; left: 75%; }
-    100% { bottom: 200px; left: 90%; }
+    0% { bottom: 15%; left: 48%; }
+    30% { bottom: 50%; left: 55%; }
+    60% { bottom: 70%; left: 65%; }
+    90% { bottom: 50%; left: 75%; }
+    100% { bottom: 15%; left: 85%; }
 }
