@@ -19,8 +19,11 @@ body {
 /* Imagen de la cancha */
 .cancha {
     position: absolute;
-    width: 100%;  /* Asegura que la cancha ocupe todo el contenedor */
-    height: 100%; /* Hace que la cancha ocupe todo el alto del contenedor */
+    top: 0;   /* Asegura que la cancha esté alineada con la parte superior de la pantalla */
+    left: 0;  /* Asegura que la cancha esté alineada con la parte izquierda de la pantalla */
+    width: 100vw;  /* Asegura que la cancha ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Asegura que la cancha ocupe todo el alto de la pantalla */
+    object-fit: cover;  /* Ajusta la imagen para cubrir todo el espacio sin distorsionarla */
 }
 
 /* Estilo para el chico */
