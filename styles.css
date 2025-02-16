@@ -26,10 +26,10 @@ body {
 /* Colocamos al chico en el centro de la cancha */
 .chico {
     position: absolute;
-    bottom: 15%;   /* Ajustamos un poco más arriba para que no esté pegado al suelo */
+    bottom: 10%;   /* Ajustamos para que no esté pegado al suelo */
     left: 50%;
-    transform: translateX(-50%);  /* Aseguramos que el chico esté centrado horizontalmente */
-    width: 15%;  /* Aumentamos el tamaño del chico */
+    transform: translateX(-50%);  /* Centramos horizontalmente */
+    width: 15vw;  /* Usamos unidades en vw para que el chico sea proporcional a la pantalla */
 }
 
 /* La pelota parte desde las manos del chico */
@@ -38,7 +38,7 @@ body {
     bottom: 20%; /* Ajustamos para que la pelota salga desde las manos del chico */
     left: 50%;
     transform: translateX(-50%);  /* Centrar la pelota con respecto al chico */
-    width: 6%;  /* Aumentamos el tamaño de la pelota */
+    width: 8vw;  /* Usamos vw para ajustar el tamaño de la pelota */
     animation: tiro 3s ease-in-out forwards;
 }
 
