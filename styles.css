@@ -29,7 +29,7 @@ body {
     bottom: 15%;   /* Ajustamos un poco más arriba para que no esté pegado al suelo */
     left: 50%;
     transform: translateX(-50%);  /* Aseguramos que el chico esté centrado horizontalmente */
-    width: 12%;
+    width: 15%;  /* Aumentamos el tamaño del chico */
 }
 
 /* La pelota parte desde las manos del chico */
@@ -38,7 +38,7 @@ body {
     bottom: 20%; /* Ajustamos para que la pelota salga desde las manos del chico */
     left: 50%;
     transform: translateX(-50%);  /* Centrar la pelota con respecto al chico */
-    width: 5%;  /* Aumento ligeramente el tamaño de la pelota */
+    width: 6%;  /* Aumentamos el tamaño de la pelota */
     animation: tiro 3s ease-in-out forwards;
 }
 
