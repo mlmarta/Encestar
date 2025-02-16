@@ -29,7 +29,7 @@ body {
     bottom: 10%;   /* Ajustamos para que no esté pegado al suelo */
     left: 50%;
     transform: translateX(-50%);  /* Centramos horizontalmente */
-    width: 15vw;  /* Usamos unidades en vw para que el chico sea proporcional a la pantalla */
+    width: 150px;  /* Usamos un tamaño fijo para el chico */
 }
 
 /* La pelota parte desde las manos del chico */
@@ -38,7 +38,7 @@ body {
     bottom: 20%; /* Ajustamos para que la pelota salga desde las manos del chico */
     left: 50%;
     transform: translateX(-50%);  /* Centrar la pelota con respecto al chico */
-    width: 8vw;  /* Usamos vw para ajustar el tamaño de la pelota */
+    width: 60px;  /* Aumentamos el tamaño de la pelota */
     animation: tiro 3s ease-in-out forwards;
 }
 
